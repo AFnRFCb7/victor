@@ -4,5 +4,12 @@ const statusText = document.getElementById("status");
 
 let alarmTimeout = null ;
 
-setAlarmButton.addEventListener ( "click" , () => alert("hello victor") )
-alarmTimeInput.addEventListener ( "dblclick" , () => alert("double clicked" ) )
+// setAlarmButton.addEventListener ( "click" , () => alert("hello victor") )
+// alarmTimeInput.addEventListener ( "dblclick" , () => alert("double clicked" ) )
+
+setAlarmButton.addEventListener ("click" , () => {
+	if(alarmTimeout) {
+		clearTimeout(alarmTimeout);
+	}
+	const timeParts = alarmTimeInput.value.split(":");
+
