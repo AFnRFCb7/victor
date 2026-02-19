@@ -19,6 +19,7 @@ setAlarmButton.addEventListener('click', () => {
       console.log("Audio playback not allowed yet:", e);
     });
   }
+});
 
 setAlarmButton.addEventListener('click', () => {
   if (alarmTimeout) {
