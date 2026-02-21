@@ -9,8 +9,12 @@ let alarmTimeout = null ;
 // setAlarmButton.addEventListener ( "click" , () => alert("hello victor") )
 // alarmTimeInput.addEventListener ( "dblclick" , () => alert("double clicked" ) )
 
+console.log("sdsaid");
+
 setAlarmButton.addEventListener('click', () => {
+  console.log("victor was here");
   if (alarmSound) {
+      console.log("Audio playback is allowed yet:");
     // unlock audio
     alarmSound.play().then(() => {
       alarmSound.pause();
@@ -18,7 +22,7 @@ setAlarmButton.addEventListener('click', () => {
     }).catch(e => {
       console.log("Audio playback not allowed yet:", e);
     });
-  }
+  }else{console.log("else")}
 });
 
 setAlarmButton.addEventListener('click', () => {
