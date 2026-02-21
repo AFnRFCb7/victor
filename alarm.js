@@ -54,9 +54,9 @@ setAlarmButton.addEventListener('click', () => {
 	    alarmSound.play();
 	  } else {
 	    // fallback
-	    alert("⏰ Alarm! Wake up! ALPHA");
+	    // alert("⏰ Alarm! Wake up! ALPHA");
 	  }
-    alert('⏰ Alarm! Wake up!   Put on a liattle makeup! BETA');
+    // alert('⏰ Alarm! Wake up!   Put on a liattle makeup! BETA');
     statusText.textContent = 'No alarm set.';
   }, timeout);
 
