@@ -10,10 +10,16 @@ main :: IO ()
 main = scotty 3000 $ do
   get "/" $ Web.Scotty.html $ renderHtml page
 
--- The HTML page
+-- HTML page with CSS grid for the board
 page :: H.Html
 page = H.docTypeHtml $ do
-  H.head $ H.title "Tic-Tac-Toe"
+  H.head $ do
+    H.title "Tic-Tac-Toe"
+    -- CSS to make a 3x3 grid
+    H.style $ H.toHtml $ unlines
+      [ "#board { display: grid; grid-template-columns: repeat(3, 100px); grid-gap: 5px; }"
+      , "#board button { width: 100px; height: 100px; font-size: 2em; }"
+      ]
   H.body $ do
     H.h1 "Tic-Tac-Toe"
     H.div H.! A.id "board" $ mapM_ button [0..8]
@@ -25,7 +31,7 @@ button i = H.button
   H.! A.onclick (H.toValue $ "move(" ++ show i ++ ")")
   $ H.toHtml (" " :: String)
 
--- JavaScript to handle clicks
+-- JavaScript for handling clicks
 jsCode :: String
 jsCode = unlines
   [ "let board = Array(9).fill('');"
