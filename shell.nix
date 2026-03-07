@@ -1,19 +1,21 @@
-# shell.nix
 { pkgs ? import <nixpkgs> {} }:
 
+# Use a recent nixpkgs snapshot for Node 22+
 let
-  ghcEnv = pkgs.haskellPackages.ghcWithPackages (h: with h; [
-    scotty
-    blaze-html
-    text
-  ]);
+  nixpkgsSrc = import (builtins.fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/refs/heads/nixos-24.05.tar.gz";
+  }) {};
 in
+nixpkgsSrc.mkShell {
+  buildInputs = [
+    nixpkgsSrc.nodejs        # Node.js v22+
+    nixpkgsSrc.nodePackages.npm
+  ];
 
-pkgs.mkShell {
-  buildInputs = [ ghcEnv ];
-
+  # Optional: set NODE_ENV for development
   shellHook = ''
-    echo "Welcome to Tic-Tac-Toe Haskell dev shell!"
-    echo "You can now run: runhaskell Main.hs"
+    echo "Welcome to Vue 8 project shell!"
+    echo "Node version: $(node -v)"
+    echo "npm version:  $(npm -v)"
   '';
 }
