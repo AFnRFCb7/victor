@@ -1,5 +1,5 @@
 <script setup>
-import lanquagecard from './components/languagecard.vue'
+import LanguageCard from './components/LanguageCard.vue'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -13,7 +13,15 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Learn a Language Online Worldwide or In-Person in Washington DC" />
-  <languagecard name="Chinese" level="Beginner" instructor="Liu Xiao Yan"/>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Level</th>
+			<th>Instructor</th>
+		</tr>
+  <LanguageCard name="Chinese" level="Beginner" instructor="Liu Xiao Yan" />
+	<LanguageCard name="Chess" level="Beginner" instructor="Victor Merryman"/>
+	</table>
 </template>
 
 <style scoped>

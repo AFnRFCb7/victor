@@ -10,10 +10,12 @@ defineProps({
 const count = ref(0)
 </script>
 
-<template>
-	<h1>{ name }</h1>
-	<p>{ level }</p>
-        <p>{ instructor }</p>		
+<template>.
+	<tr>
+	<td>{{ name }}</td>
+	<td>{{ level }}</td>
+        <td>{{ instructor }}</td>		
+	</tr>
 </template>
 
 <style scoped>
