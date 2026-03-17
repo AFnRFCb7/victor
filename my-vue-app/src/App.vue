@@ -19,8 +19,8 @@ import HelloWorld from './components/HelloWorld.vue'
 			<th>Level</th>
 			<th>Instructor</th>
 		</tr>
-  <LanguageCard name="Chinese" level="Beginner" instructor="Liu Xiao Yan" />
-	<LanguageCard name="Chess" level="Beginner" instructor="Victor Merryman"/>
+  <LanguageCard name="Chinese" level="Beginner" instructor="Liu Xiao Yan" picture="images/victor.jpg" />
+	<LanguageCard name="Chess" level="Beginner" instructor="Victor Merryman" picture="src/images/victor.jpg"/>
 	</table>
 </template>
 

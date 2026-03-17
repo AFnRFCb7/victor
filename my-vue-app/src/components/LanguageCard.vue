@@ -5,6 +5,7 @@ defineProps({
   name: String,
   level:String,
   instructor:String,
+  picture:String,
 })
 
 const count = ref(0)
@@ -14,7 +15,7 @@ const count = ref(0)
 	<tr>
 	<td>{{ name }}</td>
 	<td>{{ level }}</td>
-        <td>{{ instructor }}</td>		
+        <td>{{ instructor }}<img :src="picture"><img></td>		
 	</tr>
 </template>
 
