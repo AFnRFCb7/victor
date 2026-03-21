@@ -1,4 +1,4 @@
-# My Vue 8 Fun Project
+# I am learning Headers and VUE
 
 This is a beginner-friendly **Vue 3 project with JavaScript**.  
 It includes a simple **click counter** so you can start playing with Vue right away!
@@ -31,3 +31,10 @@ It includes a simple **click counter** so you can start playing with Vue right a
 cd ~/projects/my-vue-app
 
 https://www.islanguages.com/
+
+
+## When I finish for a session (done for now not forever)
+1. I enter `git commit -am "{some message}` where some message is a description of what I did
+2. I enter `git push ssh HEAD`
+
+This will commit everything I did and push it to github where others can see it.
