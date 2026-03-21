@@ -38,3 +38,7 @@ https://www.islanguages.com/
 2. I enter `git push ssh HEAD`
 
 This will commit everything I did and push it to github where others can see it.
+
+## Questions
+
+1. im trying to use vs code can i have the steps to make my image in 
