@@ -28,7 +28,7 @@ const count = ref(0)
     border-radius: 50%;
     object-fit: cover;
     width: 5cm;
-    width: 200px;
-    height: 200px;      
+    width: 300px;
+    height: 300px;      
 }
 </style>

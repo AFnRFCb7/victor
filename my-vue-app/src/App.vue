@@ -6,10 +6,7 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <div class="app">
     <a href="https://vite.dev" target="_blank">
-      <img src="./images/chinese.png" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <img src="./images/chinese.png" class="logo,chatgptimage" alt="Vite logo" />
     </a>
   </div>
   <HelloWorld msg="Learn a Language Online Worldwide or In-Person in Washington DC" />
@@ -25,6 +22,9 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
+.chatgptimage {
+  width:10cm
+}
 .app {
 	background-image: url(./images/chinese.png);
 }
