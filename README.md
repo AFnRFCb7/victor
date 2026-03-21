@@ -31,7 +31,7 @@ It includes a simple **click counter** so you can start playing with Vue right a
 cd ~/projects/my-vue-app
 
 https://www.islanguages.com/
-
+```
 
 ## When I finish for a session (done for now not forever)
 1. I enter `git commit -am "{some message}` where some message is a description of what I did
