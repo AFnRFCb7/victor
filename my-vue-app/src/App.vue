@@ -1,6 +1,5 @@
 <script setup>
 import LanguageCard from './components/LanguageCard.vue'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -9,7 +8,6 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./images/chinese.png" class="logo,chatgptimage" alt="Vite logo" />
     </a>
   </div>
-  <HelloWorld msg="Learn a Language Online Worldwide or In-Person in Washington DC" />
 	<table>
 		<tr>
 			<th>Name</th>
