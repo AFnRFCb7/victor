@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 
 defineProps({
+  bio: String,
   name: String,
   level:String,
   instructor:String,
@@ -11,15 +12,26 @@ defineProps({
 const count = ref(0)
 </script>
 
-<template>.
-	<tr>
+<template>
+	<tr class="language-card">
+	<td class="bio">
+	    I am awesome!
+	</td>
 	<td>{{ name }}</td>
 	<td>{{ level }}</td>
-        <td>{{ instructor }}<img class="picture" :src="picture"><img></td>		
+        <td>{{ instructor }}<img class="picture" :src="picture"></img></td>
 	</tr>
 </template>
 
 <style scoped>
+.language-card .bio {
+    opacity: 0;
+      transition: opacity 0.3s ease;
+}
+.language-card:hover .bio {
+    opacity: 1;
+}
+
 .read-the-docs {
   color: #888;
 }
