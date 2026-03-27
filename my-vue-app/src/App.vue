@@ -9,11 +9,6 @@ import LanguageCard from './components/LanguageCard.vue'
     </a>
   </div>
 	<table>
-		<tr>
-			<th>Name</th>
-			<th>Level</th>
-			<th>Instructor</th>
-		</tr>
   <LanguageCard name="Chinese" level="Beginner" instructor="Liu Xiao Yan" picture="images/victor.jpg" />
 	<LanguageCard name="Chess" level="Beginner" instructor="Victor Merryman" picture="src/images/victor.jpg"/>
 	</table>
@@ -25,6 +20,7 @@ import LanguageCard from './components/LanguageCard.vue'
 }
 .app {
 	background-image: url(./images/chinese.png);
+  opacity:0.65       
 }
 .logo {
   height: 6em;
