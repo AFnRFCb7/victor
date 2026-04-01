@@ -3,6 +3,8 @@ import LanguageCard from './components/LanguageCard.vue'
 </script>
 
 <template>
+    <router-view />
+    <!--
   <div class="app">
     <a href="https://vite.dev" target="_blank">
       <img src="./images/chinese.png" class="logo,chatgptimage" alt="Vite logo" />
@@ -17,6 +19,7 @@ import LanguageCard from './components/LanguageCard.vue'
   <LanguageCard name="Chinese" level="Beginner" instructor="Liu Xiao Yan" picture="images/victor.jpg" />
 	<LanguageCard name="Chess" level="Beginner" instructor="Victor Merryman" picture="src/images/victor.jpg"/>
 	</table>
+	-->
 </template>
 
 <style scoped>

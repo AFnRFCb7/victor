@@ -8,8 +8,10 @@ let
 in
 nixpkgsSrc.mkShell {
   buildInputs = [
-    nixpkgsSrc.nodejs        # Node.js v22+
+	nixpkgsSrc.jetbrains.idea-community
+    nixpkgsSrc.nodejs_22
     nixpkgsSrc.nodePackages.npm
+	nixpkgsSrc.yarn
   ];
 
   # Optional: set NODE_ENV for development
