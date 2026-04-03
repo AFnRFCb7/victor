@@ -8,6 +8,7 @@ let
 in
 nixpkgsSrc.mkShell {
   buildInputs = [
+	pkgs.chromium
 	nixpkgsSrc.jetbrains.idea-community
     nixpkgsSrc.nodejs_22
     nixpkgsSrc.nodePackages.npm

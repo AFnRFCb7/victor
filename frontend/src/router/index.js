@@ -3,6 +3,7 @@ import Employment from '../views/Employment.vue';
 import EmploymentReceived from '../views/EmploymentReceived.vue';
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
+import KidsTeensPrivateClasses from '../views/KidsTeensPrivateClasses.vue' ;
 
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
      name: 'About',
      component: About
    } ,
+    {
+        path : '/kids-teens-private-classes' ,
+        name : 'KidsTeensPrivateClasses' ,
+        component : KidsTeensPrivateClasses
+    } ,
   {
     path : '/employment',
     name : 'Employment',

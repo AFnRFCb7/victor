@@ -42,3 +42,51 @@ This will commit everything I did and push it to github where others can see it.
 ## Questions
 
 1. im trying to use vs code can i have the steps to make my image in 
+
+## Frontend
+
+To start the frontend
+```
+npm run dev -- --host
+```
+
+## Backend
+
+To start the backend
+`node server.js`
+
+
+        (Phone / Laptop)
+               │
+               │  HTTP request (load page) (http://192.168.1.135:5173/#/employment)
+               ▼
+     ┌──────────────────────┐
+     │   Frontend (Vue)     │
+     │  Vite dev server     │
+     │  :5173               │
+     └──────────────────────┘
+               │
+               │  fetch('/api/employment')
+               │  POST form data
+               ▼
+     ┌──────────────────────┐
+     │  Backend (Node)      │
+     │  Express server      │
+     │  :3000               │
+     └──────────────────────┘
+               │
+               │  (process / save data)
+               ▼
+        ┌──────────────┐
+        │ Storage      │
+        │ (file / DB)  │
+        └──────────────┘
+
+
+I had to
+
+```
+sudo iptables -I INPUT -p tcp --dport 3000 -j ACCEPT
+sudo iptables -I INPUT -p tcp --dport 5173 -j ACCEPT
+
+```
