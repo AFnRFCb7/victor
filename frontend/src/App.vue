@@ -1,9 +1,33 @@
-<script setup>
-import LanguageCard from './components/LanguageCard.vue'
-</script>
 
 <template>
+    <div>
+  <nav class="nav">
+    <ul class="menu">
+      <li v-for="item in menu" :key="item.label" class="menu-item">
+        
+        <!-- If NO submenu -->
+        <router-link v-if="!item.children" :to="item.to">
+          {{ item.label }}
+        </router-link>
+
+        <!-- If HAS submenu -->
+        <div v-else class="dropdown" @click="toggle(item)">
+          {{ item.label }}
+
+          <ul v-if="item.open" class="dropdown-menu">
+            <li v-for="child in item.children" :key="child.label">
+              <router-link :to="child.to">
+                {{ child.label }}
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+    </div>
     <router-view />
+    <h1>footer</h1>
     <!--
   <div class="app">
     <a href="https://vite.dev" target="_blank">
@@ -22,23 +46,56 @@ import LanguageCard from './components/LanguageCard.vue'
 	-->
 </template>
 
+<script setup>
+import LanguageCard from './components/LanguageCard.vue'
+
+import { reactive } from 'vue'
+
+const menu = reactive([
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  {
+    label: 'Services',
+    open: false,
+    children: [
+      { label: 'Web Dev', to: '/services/web' },
+      { label: 'Design', to: '/services/design' }
+    ]
+  },
+  {
+    label: 'Account',
+    open: false,
+    children: [
+      { label: 'Profile', to: '/profile' },
+      { label: 'Settings', to: '/settings' }
+    ]
+  }
+])
+
+function toggle(item) {
+  item.open = !item.open
+}
+</script>
+
 <style scoped>
-.chatgptimage {
-  width:10cm
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
-.app {
-	background-image: url(./images/chinese.png);
+
+.dropdown {
+  cursor: pointer;
+  position: relative;
 }
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.dropdown-menu {
+  position: absolute;
+  background: #333;
+  color: white;
+  list-style: none;
+  padding: 10px;
+  top: 100%;
+  left: 0;
 }
 </style>
