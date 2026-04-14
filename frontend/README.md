@@ -18,5 +18,5 @@ http://localhost:5173/#/employment
 
 ```
 npm install
-npm run dev
+npm run dev -- --host
 ```

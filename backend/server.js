@@ -16,6 +16,10 @@ app.get('/67', (req, res) => {
     const name = req.query.name;
   res.send(`67 works and it is fast! YOUR NAME IS ${name}`)
 })
+app.get('/six-seven/:name', (req,res) => {
+    const name = req.params.name ;
+    res.send(`Hello ${ name }`)
+})
 // Endpoint to receive employment form
 app.post('/api/employment', upload.single('resume'), (req, res) => {
   const { name, email, phone, teach, availability, message } = req.body
