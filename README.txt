@@ -1,3 +1,0 @@
-Hello Victor
-
-Hello Alexander

@@ -1,0 +1,1 @@
+export const school = "Victor's COOL School";
